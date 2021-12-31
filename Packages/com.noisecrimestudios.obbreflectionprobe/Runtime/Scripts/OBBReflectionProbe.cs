@@ -101,6 +101,11 @@ namespace NoiseCrimeStudios.Rendering.OBBProjectionProbe
 
 			Matrix4x4 trs = Matrix4x4.TRS( position, transform.rotation, scale );
 			Shader.SetGlobalMatrix( boxProbeWorldToLocalID, trs.inverse );
+
+			// Tests for fixing deferred rendering.
+		//	Shader.SetGlobalMatrix( "_BoxProbeMatrix", transform.localToWorldMatrix); 
+		//	Shader.SetGlobalMatrix( "_BoxProbeMatrix", Matrix4x4.TRS( transform.position, transform.rotation, Vector3.one ) );
+		//	Shader.SetGlobalMatrix( "_BoxProbeMatrix", Matrix4x4.TRS( Vector3.zero, transform.rotation, Vector3.one ) );
 		}		
 
 
