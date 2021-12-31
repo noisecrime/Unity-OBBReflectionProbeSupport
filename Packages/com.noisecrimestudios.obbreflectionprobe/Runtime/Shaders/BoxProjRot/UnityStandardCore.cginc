@@ -313,7 +313,8 @@ inline UnityGI FragmentGI (FragmentCommonData s, half occlusion, half4 i_ambient
 
 		#if OBB_PROJECTION
 		// Intersection with OBB - Transform in local unit parallax cube space (scaled and rotated)
-		g.RayLS			= mul((float3x3)_BoxProbeWorldToLocal, g.reflUVW);
+        // If UNITY_STANDARD_SIMPLE defined could we do these in vertex shader?
+		g.RayLS			= mul((float3x3)_BoxProbeWorldToLocal, g.reflUVW);  // normalise?
 		g.PositionLS	= mul(_BoxProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
 		#endif
 

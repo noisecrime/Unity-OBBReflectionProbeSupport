@@ -226,22 +226,29 @@ half3 ShadeSHPerPixel (half3 normal, half3 ambient, float3 worldPos)
 //-------------------------------------------------------------------------------------
 // worldRefl = ReflDirectionWS
 // worldPos  = PositionWS
+// We have to convert either worldPos & worldRefl to localspace OF PROBE or +Unitary & -Unitary to worldspace OF PROBE
 inline float3 BoxProjectedCubemapDirection(float3 worldRefl, float3 worldPos, float4 cubemapCenter, float3 RayLS, float3 PositionLS )
 {
 	// Do we have a valid reflection probe?
 	UNITY_BRANCH
 	if (cubemapCenter.w > 0.0)
 	{
+        float3 nrdir = normalize(worldRefl);
+
 		float3 Unitary = float3(1.0f, 1.0f, 1.0f);
 		float3 FirstPlaneIntersect = (Unitary - PositionLS) / RayLS;
 		float3 SecondPlaneIntersect = (-Unitary - PositionLS) / RayLS;
 		float3 FurthestPlane = max(FirstPlaneIntersect, SecondPlaneIntersect);
-	//	float3 FurthestPlane = (worldRefl > 0.0f) ? FirstPlaneIntersect : SecondPlaneIntersect;
-		float Distance = min(FurthestPlane.x, min(FurthestPlane.y, FurthestPlane.z));
-
+	    // float3 FurthestPlane = (nrdir > 0.0f) ? FirstPlaneIntersect : SecondPlaneIntersect;
+		// float Distance = min(FurthestPlane.x, min(FurthestPlane.y, FurthestPlane.z));
 		// Use Distance in WS directly to recover intersection
-		float3 IntersectPositionWS = worldPos + worldRefl * Distance;
-		worldRefl = IntersectPositionWS - cubemapCenter.xyz;
+	    // float3 IntersectPositionWS = worldPos + nrdir * Distance;
+	    // worldRefl = IntersectPositionWS - cubemapCenter.xyz;
+
+		float fa = min(FurthestPlane.x, min(FurthestPlane.y, FurthestPlane.z));
+
+        worldPos -= cubemapCenter.xyz;
+        worldRefl = worldPos + nrdir * fa;
 	}
 
 	return worldRefl;
