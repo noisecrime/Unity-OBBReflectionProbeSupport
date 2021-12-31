@@ -1,0 +1,15 @@
+{
+    "name": "NoiseCrimeStudios.Rendering.OBBReflectionProbe.Editor",
+    "references": [
+        "GUID:a26cf8c8d1b59ca41b3f66f4c795e7e2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
