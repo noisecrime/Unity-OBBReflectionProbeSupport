@@ -37,9 +37,9 @@ namespace NoiseCrimeStudios.Rendering.OBBProjectionProbe
 		private void OnDrawGizmosSelected()
 		{
 			Color oldColor = Gizmos.color;
-			Gizmos.matrix =  Matrix4x4.TRS( probe.transform.position, probe.transform.rotation, Vector3.one );
+			Gizmos.matrix =  Matrix4x4.TRS( transform.position, transform.rotation, Vector3.one );
 			Gizmos.color = new Color( 1f, 0.5f, 1f, 0.75f );
-			Gizmos.DrawWireCube( probe.center, probe.size );
+			Gizmos.DrawWireCube( Probe.center, Probe.size );
 			Gizmos.matrix = Matrix4x4.identity;
 			Gizmos.color = oldColor;
 		}

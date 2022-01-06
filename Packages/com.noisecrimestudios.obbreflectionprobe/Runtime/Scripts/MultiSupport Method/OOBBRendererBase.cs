@@ -31,7 +31,7 @@ namespace NoiseCrimeStudios.Rendering.OBBProjectionProbe
 		#region Unity Methods
 
 		// Update is used for performance testing only
-		// private void Update()	 { RequestProbeMatrix( RequstPurpose.Update ); }
+		// private void Update()	 { RequestProbeMatrix( RequstPurpose.Update, true ); }
 
 		// OnValidate doesn't seem to have any point here.
 		// private void OnValidate() { RequestProbeMatrix( RequstPurpose.OnValidate ); }
