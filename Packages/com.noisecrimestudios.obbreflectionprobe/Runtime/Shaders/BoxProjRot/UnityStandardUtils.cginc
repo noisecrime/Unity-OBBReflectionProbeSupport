@@ -224,10 +224,12 @@ half3 ShadeSHPerPixel (half3 normal, half3 ambient, float3 worldPos)
 }
 
 //-------------------------------------------------------------------------------------
+
+// ---------------------------------------------- NoiseCrimeStudios : OBB Support
 // worldRefl = ReflDirectionWS
 // worldPos  = PositionWS
 // We have to convert either worldPos & worldRefl to localspace OF PROBE or +Unitary & -Unitary to worldspace OF PROBE
-inline float3 BoxProjectedCubemapDirection(float3 worldRefl, float3 worldPos, float4 cubemapCenter, float3 RayLS, float3 PositionLS )
+inline float3 BoxProjectedCubemapDirection(float3 worldRefl, float3 worldPos, float4 cubemapCenter, float3 probeLocalReflUVW, float3 probeLocalPosition )
 {
 	// Do we have a valid reflection probe?
 	UNITY_BRANCH
@@ -236,8 +238,8 @@ inline float3 BoxProjectedCubemapDirection(float3 worldRefl, float3 worldPos, fl
         float3 nrdir = normalize(worldRefl);
 
 		float3 Unitary = float3(1.0f, 1.0f, 1.0f);
-		float3 FirstPlaneIntersect = (Unitary - PositionLS) / RayLS;
-		float3 SecondPlaneIntersect = (-Unitary - PositionLS) / RayLS;
+		float3 FirstPlaneIntersect = (Unitary - probeLocalPosition) / probeLocalReflUVW;
+		float3 SecondPlaneIntersect = (-Unitary - probeLocalPosition) / probeLocalReflUVW;
 		float3 FurthestPlane = max(FirstPlaneIntersect, SecondPlaneIntersect);
 	    // float3 FurthestPlane = (nrdir > 0.0f) ? FirstPlaneIntersect : SecondPlaneIntersect;
 		// float Distance = min(FurthestPlane.x, min(FurthestPlane.y, FurthestPlane.z));
@@ -253,6 +255,7 @@ inline float3 BoxProjectedCubemapDirection(float3 worldRefl, float3 worldPos, fl
 
 	return worldRefl;
 }
+// ----------------------------------------------
 
 inline float3 BoxProjectedCubemapDirection (float3 worldRefl, float3 worldPos, float4 cubemapCenter, float4 boxMin, float4 boxMax)
 {

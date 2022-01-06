@@ -1,13 +1,13 @@
 {
   "name": "com.noisecrimestudios.obbreflectionprobe",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "displayName": "OBB Reflection Probe",
   "description": "Basic OBB Reflection Probe support for Built-in Rendering Pipeline",
   "unity": "2019.4",
   "unityRelease": "0f1",
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",
-  "licensesUrl": "https://example.com/licensing.html",
+  "licensesUrl": "https://github.com/noisecrime/Unity-OBBReflectionProbeSupport/blob/main/LICENSE",
   "keywords": [
     "reflection",
     "probe",
@@ -17,9 +17,9 @@
   ],
   "samples": [
     {
-      "displayName": "Example Scene",
-      "description": "Contains an example scene showing OBB Reflection Probes and for debugging",
-      "path": "Samples~/Example"
+      "displayName": "Demo Scenes",
+      "description": "Contains example demo scenes showing OBB Reflection Probes and for debugging",
+      "path": "Samples~/Demo"
     }
   ],
   "author": {

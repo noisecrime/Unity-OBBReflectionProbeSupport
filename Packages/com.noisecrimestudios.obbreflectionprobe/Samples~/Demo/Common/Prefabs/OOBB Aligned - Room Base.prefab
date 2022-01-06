@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2559924943360464881
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1022523978424811216, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523978680405127, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523978752251338, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523978752251338, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77b42271b1b45ba449a56cf6f1bdd53b, type: 2}
+    - target: {fileID: 1022523979055754493, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 1022523979165828505, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523979165828505, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2293a33ded5dbe34ca7d4110962a876d, type: 2}
+    - target: {fileID: 1022523979224554996, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Room Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554998, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554999, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: notes
+      value: Base contains OOBB Materials but no OOBB Controllers or renderers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979224554999, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: title
+      value: OOBB Aligned - Room Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979418252435, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523979471453107, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 1022523979703591652, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523979703591652, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: d03099f42b1277148b7a9e67f0966647, type: 2}
+    - target: {fileID: 1022523979806957423, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523979898239270, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Room Base Probe
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022523979906672148, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 1022523979940985467, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523980278810924, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 60cb0cbe14877cc4bbcc958dbaaf273f, type: 2}
+    - target: {fileID: 1022523980278810924, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 16e00483d9fa8e94da3894e6e8f6253d, type: 2}
+    - target: {fileID: 1022523980343991197, guid: d862013b53808f442bb5e3cebc8781c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c4118f42ed140a4791b5ee39439ac99, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d862013b53808f442bb5e3cebc8781c3, type: 3}

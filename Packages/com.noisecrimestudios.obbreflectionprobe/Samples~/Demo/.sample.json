@@ -1,0 +1,5 @@
+{
+	"displayName": "Demo Scenes",
+	"description": "Contains example demo scenes showing OBB Reflection Probes and for debugging.",
+	"createSeparatePackage.": false
+}

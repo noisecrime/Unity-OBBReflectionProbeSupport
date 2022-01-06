@@ -1,0 +1,16 @@
+MK3 Plan
+
+Management
+Editor script to automatically apply to valid renderers
+ - OOBBProbeRenderer 
+ - Change Material Shader
+
+ How to change shader?
+ For shared material it wil change all - maybe we can use shader defines.
+
+
+OOBBReflectionProbe
+	onEnable - fetches Matrix from Probe?
+
+
+Store data in a scriptableObject?

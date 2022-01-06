@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &3172056591941417625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4509448170524232141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6003a722105904047893f87b40f3bc08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeBoxOffset: 1
+--- !u!1001 &3655184413868009925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 877381569257416226, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: notes
+      value: 'Contains controller to support single global instance of a STATIC OOBB
+        Probe. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416226, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: title
+      value: OOBB Aligned - Pillars Single Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416229, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Single Static
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381570598821896, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Single Static Probe
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 059d05db494e5ca4eaf655bba2193bfd, type: 3}
+--- !u!1 &4509448170524232141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 877381570598821896, guid: 059d05db494e5ca4eaf655bba2193bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3655184413868009925}
+  m_PrefabAsset: {fileID: 0}

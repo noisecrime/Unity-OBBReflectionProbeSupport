@@ -267,7 +267,7 @@ inline FragmentCommonData FragmentSetup (inout float4 i_tex, float3 i_eyeVec, ha
 // Notes:
 // OBB - https://seblagarde.files.wordpress.com/2012/08/parallax_corrected_cubemap-gameconnection2012.pdf
 // BoxProjRot\UnityStandardInput.cginc		contains Property Definitions
-// BoxProjRot\UnityImageBasedLighting.cginc	contains RayLS and PositionLS definitions (g)
+// BoxProjRot\UnityImageBasedLighting.cginc	contains probeLocalReflUVW and probeLocalPosition definitions (g)
 // BoxProjRot\UnityGlobalIllumination.cginc	contains UnityGI_IndirectSpecular that calls BoxProjectedCubemapDirection
 // BoxProjRot\UnityStandardUtils.cginc		contains BoxProjectedCubemapDirection
 // BoxProjRot\UnityLightingCommon.cginc		contains UnityGIInput Definition (d)
@@ -311,12 +311,14 @@ inline UnityGI FragmentGI (FragmentCommonData s, half occlusion, half4 i_ambient
 		g.reflUVW = s.reflUVW;
 #endif
 
+        // ---------------------------------------------- NoiseCrimeStudios : OBB Support
 		#if OBB_PROJECTION
-		// Intersection with OBB - Transform in local unit parallax cube space (scaled and rotated)
+        // Intersection with OBB - Transform in local unit parallax cube space of probe (scaled and rotated)
         // If UNITY_STANDARD_SIMPLE defined could we do these in vertex shader?
-		g.RayLS			= mul((float3x3)_BoxProbeWorldToLocal, g.reflUVW);  // normalise?
-		g.PositionLS	= mul(_BoxProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
+        g.probeLocalReflUVW     = mul((float3x3)_OBBProbeWorldToLocal, g.reflUVW);  // normalise?
+		g.probeLocalPosition    = mul(_OBBProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
 		#endif
+        // ----------------------------------------------
 
         return UnityGlobalIllumination (d, occlusion, s.normalWorld, g);
     }

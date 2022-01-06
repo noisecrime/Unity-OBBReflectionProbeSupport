@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6040277427847870246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948634849094046217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894c590aa7bb14d4cadf4b4e18922b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  includeBoxOffset: 1
+--- !u!1001 &1668553914883437057
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 877381569257416226, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: notes
+      value: 'Contains controller to support single global instance of a REALTIME
+        OOBB Probe. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416226, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: title
+      value: OOBB Aligned - Pillars Single Realtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416227, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569257416229, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Single Realtime
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381569300755473, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569345917222, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569353195401, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569489552406, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569657979993, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569711027002, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569719987949, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381569849647592, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570131896086, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570270459989, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570421940471, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570591178537, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570598821896, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Single Realtime Probe
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381570598821910, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381570598821910, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_RefreshMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381570598821910, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_TimeSlicingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 877381570636399293, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570686150105, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570717784782, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381570893700995, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    - target: {fileID: 877381571243495242, guid: 059d05db494e5ca4eaf655bba2193bfd,
+        type: 3}
+      propertyPath: m_ProbeAnchor
+      value: 
+      objectReference: {fileID: 1948634849094046216}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 059d05db494e5ca4eaf655bba2193bfd, type: 3}
+--- !u!1 &1948634849094046217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 877381570598821896, guid: 059d05db494e5ca4eaf655bba2193bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1668553914883437057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1948634849094046216 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 877381570598821897, guid: 059d05db494e5ca4eaf655bba2193bfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1668553914883437057}
+  m_PrefabAsset: {fileID: 0}

@@ -1,0 +1,181 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8135782840783536920
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8990608176263875666, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342d2165556e5614b9cec96362c84527, type: 2}
+    - target: {fileID: 8990608176500497563, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b4e0964ee59f34d8af104787dc6bc9, type: 2}
+    - target: {fileID: 8990608176732619173, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b4e0964ee59f34d8af104787dc6bc9, type: 2}
+    - target: {fileID: 8990608176761758480, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Base Probe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608176810596822, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608176846464705, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608177118995439, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342d2165556e5614b9cec96362c84527, type: 2}
+    - target: {fileID: 8990608177205656625, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342d2165556e5614b9cec96362c84527, type: 2}
+    - target: {fileID: 8990608177367131150, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608177485650088, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 8990608177505434445, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608177552941808, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b4e0964ee59f34d8af104787dc6bc9, type: 2}
+    - target: {fileID: 8990608177882941249, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b4e0964ee59f34d8af104787dc6bc9, type: 2}
+    - target: {fileID: 8990608177946783221, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608177951584290, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 8990608178060765007, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 265558c14047e224fa33baf922db70c0, type: 2}
+    - target: {fileID: 8990608178064029449, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ce64b530acaa44296c359880987066, type: 2}
+    - target: {fileID: 8990608178103133498, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: notes
+      value: Base contains OOBB Materials but no OOBB Controlers or renderers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133498, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: title
+      value: OOBB Aligned - Pillars Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133499, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178103133501, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Name
+      value: OOBB Aligned - Pillars Base
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990608178183576721, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b1b4e0964ee59f34d8af104787dc6bc9, type: 2}
+    - target: {fileID: 8990608178190848574, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342d2165556e5614b9cec96362c84527, type: 2}
+    - target: {fileID: 8990608178319804174, guid: d171c9115aaf2104384ba053125d008b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 342d2165556e5614b9cec96362c84527, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d171c9115aaf2104384ba053125d008b, type: 3}

@@ -492,8 +492,10 @@ struct Unity_GlossyEnvironmentData
     // Surface properties use for cubemap integration
     half    roughness; // CAUTION: This is perceptualRoughness but because of compatibility this name can't be change :(
     half3   reflUVW;
-	half3	RayLS;
-	float3	PositionLS;
+    // ---------------------------------------------- NoiseCrimeStudios : OBB Support
+	half3	probeLocalReflUVW;
+	float3	probeLocalPosition;
+    // ----------------------------------------------
 };
 
 // ----------------------------------------------------------------------------

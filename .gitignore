@@ -3,7 +3,9 @@
 # ===================================== #
 /_Archive/
 /_Research/
-/Assets/AssetStoreTools*
+/Recordings/
+/Assets/Private/
+/Assets/Private.meta
 /Assets/Samples/
 /Assets/Samples.meta
 /Assets/TextMesh Pro/

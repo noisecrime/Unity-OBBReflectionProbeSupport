@@ -1,5 +1,3 @@
 # NoiseCrimeStudios OBB Reflection Probe Documentation
-TBD
-
-## Getting Started
-TBD
+Please see the OOBBReflectionProbeSupportGuide.pdf
+It can be found in Packages\com.noisecrimestudios.obbreflectionprobe\Documentation~

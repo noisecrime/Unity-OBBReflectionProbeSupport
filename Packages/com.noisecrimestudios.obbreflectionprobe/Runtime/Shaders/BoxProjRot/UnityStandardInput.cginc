@@ -18,7 +18,9 @@
     #define _DETAIL 1
 #endif
 
-float4x4	_BoxProbeWorldToLocal;
+// ---------------------------------------------- NoiseCrimeStudios : OBB Support
+float4x4	_OBBProbeWorldToLocal;
+// ----------------------------------------------
 
 //---------------------------------------
 half4       _Color;

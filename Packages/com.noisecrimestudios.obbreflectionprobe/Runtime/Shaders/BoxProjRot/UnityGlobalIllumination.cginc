@@ -155,11 +155,13 @@ inline half3 UnityGI_IndirectSpecular(UnityGIInput data, half occlusion, Unity_G
     #ifdef UNITY_SPECCUBE_BOX_PROJECTION
         // we will tweak reflUVW in glossIn directly (as we pass it to Unity_GlossyEnvironment twice for probe0 and probe1), so keep original to pass into BoxProjectedCubemapDirection
         half3 originalReflUVW = glossIn.reflUVW;
+        // ---------------------------------------------- NoiseCrimeStudios : OBB Support
 		#if OBB_PROJECTION
-			glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[0], glossIn.RayLS, glossIn.PositionLS);
+			glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[0], glossIn.probeLocalReflUVW, glossIn.probeLocalPosition);
 		#else
 			glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[0], data.boxMin[0], data.boxMax[0]);
 		#endif
+        // ----------------------------------------------
     #endif
 
     #ifdef _GLOSSYREFLECTIONS_OFF
@@ -173,11 +175,13 @@ inline half3 UnityGI_IndirectSpecular(UnityGIInput data, half occlusion, Unity_G
             if (blendLerp < kBlendFactor)
             {
                 #ifdef UNITY_SPECCUBE_BOX_PROJECTION
+                    // ---------------------------------------------- NoiseCrimeStudios : OBB Support
 					#if OBB_PROJECTION
-						glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[1], glossIn.RayLS, glossIn.PositionLS);
+						glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[1], glossIn.probeLocalReflUVW, glossIn.probeLocalPosition);
 					#else
 						glossIn.reflUVW = BoxProjectedCubemapDirection (originalReflUVW, data.worldPos, data.probePosition[1], data.boxMin[1], data.boxMax[1]);
 					#endif
+                    // ----------------------------------------------
                 #endif
 
                 half3 env1 = Unity_GlossyEnvironment (UNITY_PASS_TEXCUBE_SAMPLER(unity_SpecCube1,unity_SpecCube0), data.probeHDR[1], glossIn);
@@ -201,7 +205,7 @@ inline half3 UnityGI_IndirectSpecular(UnityGIInput data, half occlusion, half3 n
     // normalWorld is not used
     return UnityGI_IndirectSpecular(data, occlusion, glossIn);
 }
-// _BoxProbeWorldToLocal here?
+
 inline UnityGI UnityGlobalIllumination (UnityGIInput data, half occlusion, half3 normalWorld)
 {
     return UnityGI_Base(data, occlusion, normalWorld);

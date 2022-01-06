@@ -13,7 +13,9 @@ Pass {
     ZTest LEqual
     Blend [_SrcBlend] [_DstBlend]
 CGPROGRAM
+// ---------------------------------------------- NoiseCrimeStudios : OBB Support
 #define OBB_PROJECTION 1
+// ----------------------------------------------
 
 #pragma target 3.0
 #pragma vertex vert_deferred
@@ -31,8 +33,10 @@ sampler2D _CameraGBufferTexture0;
 sampler2D _CameraGBufferTexture1;
 sampler2D _CameraGBufferTexture2;
 
-float4x4    _BoxProbeWorldToLocal;
+// ---------------------------------------------- NoiseCrimeStudios : OBB Support
+float4x4    _OBBProbeWorldToLocal;
 // float4x4    _BoxProbeMatrix;
+// ----------------------------------------------
 
 half3 distanceFromAABB(half3 p, half3 aabbMin, half3 aabbMax)
 {
@@ -43,13 +47,15 @@ unity_v2f_deferred vert_deferredCustom (float4 vertex : POSITION, float3 normal 
 {
     unity_v2f_deferred o;
 
+    // ---------------------------------------------- NoiseCrimeStudios : OBB Support
     // Testing trying to rotate the rendered cube - doesn't work
     // Might be looking in the wrong place - might be a stencil issue elsewhere!
     
-    //  float4x4 m = _BoxProbeWorldToLocal; //  (float3x3)
+    //  float4x4 m = _OBBProbeWorldToLocal; //  (float3x3)
     //  m[0][0] = 1; m[1][1] = 1; m[2][2] = 1; 
     //  vertex = mul(_BoxProbeMatrix, vertex);
     //  vertex.xyz = mul((float3x3)_BoxProbeMatrix, vertex.xyz);
+    
     /*
     float vx =  cos(0.2) * vertex.z + sin(0.2) * vertex.x;
     float vz = -sin(0.2) * vertex.x + cos(0.2) * vertex.z;
@@ -57,10 +63,22 @@ unity_v2f_deferred vert_deferredCustom (float4 vertex : POSITION, float3 normal 
     vertex.z = vz;
     */
 
+    /*
+    float4x4 rotated = mul(unity_ObjectToWorld, _BoxProbeMatrix );
+    float4 newVertex =  mul( rotated, vertex );
+    o.pos = mul(UNITY_MATRIX_VP, newVertex);
+    o.ray = UnityObjectToViewPos(newVertex) * float3(-1,-1,1);
+    o.uv = ComputeScreenPos(o.pos);
+    */
+
+    // vertex.xyz = vertex.xyz * 1.2;
+
+    // ----------------------------------------------
+
     o.pos = UnityObjectToClipPos(vertex);
     o.uv = ComputeScreenPos(o.pos);
-    o.ray = UnityObjectToViewPos(vertex) * float3(-1,-1,1);
-
+    o.ray = UnityObjectToViewPos(vertex) * float3(-1,-1,1);  
+    
     // normal contains a ray pointing from the camera to one of near plane's
     // corners in camera space when we are drawing a full screen quad.
     // Otherwise, when rendering 3D shapes, use the ray calculated here.
@@ -107,15 +125,20 @@ half4 frag (unity_v2f_deferred i) : SV_Target
     #endif
 
     Unity_GlossyEnvironmentData g = UnityGlossyEnvironmentSetup(data.smoothness, d.worldViewDir, data.normalWorld, data.specularColor);
-              
-    #ifdef UNITY_SPECCUBE_BOX_PROJECTION 
-    #if OBB_PROJECTION
-		// Intersection with OBB - Transform in local unit parallax cube space (scaled and rotated)
-		g.RayLS			= mul((float3x3)_BoxProbeWorldToLocal, g.reflUVW);  // normalise?
-		g.PositionLS	= mul(_BoxProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
-	#endif
-    #endif
 
+    // ---------------------------------------------- NoiseCrimeStudios : OBB Support
+    // Note: Maybe we should be doing this in UnityGlossyEnvironmentSetup to catch all code paths?
+    // Might have to alter UNITY_GLOSSY_ENV_FROM_SURFACE too.
+    // EXCEPT - we redefine glossIn.reflUVW in UnityGI_IndirectSpecular to use the box projected result!!!!
+    #ifdef UNITY_SPECCUBE_BOX_PROJECTION 
+        #if OBB_PROJECTION
+		    // Intersection with OBB - Transform in local unit parallax cube space of probe (scaled and rotated)
+		    g.probeLocalReflUVW		= mul((float3x3)_OBBProbeWorldToLocal, g.reflUVW);  // normalise?
+		    g.probeLocalPosition	= mul(_OBBProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
+	    #endif
+    #endif
+    // ----------------------------------------------
+   
     half3 env0 = UnityGI_IndirectSpecular(d, data.occlusion, g);
 
     UnityLight light;
@@ -156,10 +179,7 @@ Pass
         #include "BoxProjRot/UnityCG.cginc"
 
         sampler2D _CameraReflectionsTexture;
-       
-        // float4x4    _BoxProbeWorldToLocal;
-        // float4x4    _BoxProbeMatrix;
-
+ 
         struct v2f {
             float2 uv : TEXCOORD0;
             float4 pos : SV_POSITION;
@@ -168,18 +188,7 @@ Pass
         v2f vert (float4 vertex : POSITION)
         {
             v2f o;
-            // Testing trying to rotate the rendered cube - doesn't work
-            // Might be looking in the wrong place - might be a stencil issue elsewhere!
-
-            // vertex = vertex + float4(0.5,0,0,0);
-            // vertex.xyz = mul((float3x3)_BoxProbeMatrix, vertex.xyz);
-            // vertex = mul(_BoxProbeMatrix, vertex);
-            /*
-            float vx =  cos(0.2) * vertex.x + sin(0.2) * vertex.z;
-            float vz = -sin(0.2) * vertex.z + cos(0.2) * vertex.x;
-            vertex.x = vx; 
-            vertex.z = vz;
-            */
+            
             o.pos = UnityObjectToClipPos(vertex);
             o.uv = ComputeScreenPos (o.pos).xy;
             return o;
