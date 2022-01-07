@@ -1092,11 +1092,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69d224df0c300ef48a6e6ae26e5f8ab9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  durationBetwenPoints: 2
+  useDeltaFrame: 1
   points:
   - {fileID: 307131902}
   - {fileID: 634625877}
   - {fileID: 1502226566}
-  durationBetwenPoints: 2
 --- !u!114 &1767160589
 MonoBehaviour:
   m_ObjectHideFlags: 0

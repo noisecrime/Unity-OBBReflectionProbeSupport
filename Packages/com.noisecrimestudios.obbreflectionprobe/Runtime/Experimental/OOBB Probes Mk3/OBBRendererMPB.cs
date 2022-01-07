@@ -25,7 +25,7 @@ namespace NoiseCrimeStudios.Rendering.OBBProjectionProbe.Experimental
 		static List<ReflectionProbeBlendInfo>	probes = new List<ReflectionProbeBlendInfo>();
 
 		// Static Material Property Block for reuse with all instances
-		static MaterialPropertyBlock			materialPropertyBlock;
+		static MaterialPropertyBlock			materialPropertyBlock = new MaterialPropertyBlock();
 
 		static List<Material>					materials = new List<Material>();
 
@@ -56,13 +56,13 @@ namespace NoiseCrimeStudios.Rendering.OBBProjectionProbe.Experimental
 				if ( renderer.HasPropertyBlock() )
 					renderer.GetPropertyBlock( materialPropertyBlock, i);
 				else
-					materialPropertyBlock = new MaterialPropertyBlock();
+					materialPropertyBlock.Clear();
 				
 				// Add our cached matrix and '_OBBProbeWorldToLocal' property to the materialPropertyBlock.
 				materialPropertyBlock.SetMatrix( obbProbeWorldToLocalID, cachedProbeWorldToLocalMatrix );
 				
 				// Set the renderer to use the updated materialPropertyBlock.
-				renderer.SetPropertyBlock( materialPropertyBlock );
+				renderer.SetPropertyBlock( materialPropertyBlock, i );
 			}
 		}
 

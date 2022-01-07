@@ -421,7 +421,7 @@ ReflectionProbe:
   m_Mode: 0
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 512
+  m_Resolution: 256
   m_UpdateFrequency: 0
   m_BoxSize: {x: 9.5, y: 4.2, z: 9.5}
   m_BoxOffset: {x: 0, y: 2, z: 0}
@@ -848,7 +848,7 @@ GameObject:
   - component: {fileID: 8990608177485650089}
   - component: {fileID: 8990608177485650088}
   m_Layer: 0
-  m_Name: Does Not Render To Probe - Sphere
+  m_Name: Dynamic - Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 8990608178060765004}
   - component: {fileID: 8990608178060765007}
   m_Layer: 0
-  m_Name: Does Not Render To Probe - Cube
+  m_Name: Dynamic - Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

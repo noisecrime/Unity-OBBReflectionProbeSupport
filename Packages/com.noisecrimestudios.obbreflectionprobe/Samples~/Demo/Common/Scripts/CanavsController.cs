@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace NoiseCrimeStudios.Examples.OBBProjection
 {
-	[ExecuteAlways]
+	// [ExecuteAlways]
 	public class CanavsController : MonoBehaviour
     {
         [SerializeField] TextMeshProUGUI	titleTmpro;
@@ -13,19 +13,13 @@ namespace NoiseCrimeStudios.Examples.OBBProjection
 		[SerializeField] GameObject			notesGroup;
 		[SerializeField] bool				showNotes = true;
 
-		private void Awake()
-		{
-			titleTmpro.text = SceneManager.GetActiveScene().name;
-			notesTmpro.text	= "";
-			notesGroup.SetActive(showNotes);
-		}
-
+	
 		public void UpdateContents( string titleCard, string notes )
 		{
 			titleTmpro.text = titleCard + "  [" + SceneManager.GetActiveScene().name + "]";
 			notesTmpro.text	= notes;
 
-			notesGroup.SetActive(showNotes);
+			notesGroup.SetActive(showNotes && !string.IsNullOrEmpty(notes));
 		}
 	}
 }

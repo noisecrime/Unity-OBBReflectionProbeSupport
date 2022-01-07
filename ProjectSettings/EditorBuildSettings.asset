@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/OBB Reflection Probe/0.6.0/Demo Scenes/Scenes/ncs.MultiPerRenderer.unity
     guid: b2cc640dafc33f84985a60db72653df4
+  - enabled: 0
+    path: Assets/Samples/OBB Reflection Probe/0.6.0/Demo Scenes/Scenes/ncs.MultiRealtimeRotating.unity
+    guid: a82de7cd59eea09438ec237abca1ea58
   m_configObjects: {}
