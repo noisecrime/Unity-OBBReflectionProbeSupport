@@ -1,6 +1,6 @@
 {
   "name": "com.noisecrimestudios.obbreflectionprobe",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "displayName": "OBB Reflection Probe",
   "description": "Basic OBB Reflection Probe support for Built-in Rendering Pipeline",
   "unity": "2019.4",

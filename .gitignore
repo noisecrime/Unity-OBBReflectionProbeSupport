@@ -1,9 +1,16 @@
 # ===================================== #
 # NoiseCrimeStudios                     #
 # ===================================== #
-/_Archive/
-/_Research/
-/Recordings/
+/\[Archive]/
+/\[Resources]/
+/\[Recordings]/
+
+
+# ===================================== #
+# Project Assets                        #
+# ===================================== #
+/Assets/Experimental/
+/Assets/Experimental.meta
 /Assets/Private/
 /Assets/Private.meta
 /Assets/Samples/

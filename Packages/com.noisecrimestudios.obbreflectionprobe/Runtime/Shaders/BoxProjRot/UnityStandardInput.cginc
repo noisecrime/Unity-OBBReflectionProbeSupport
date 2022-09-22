@@ -20,6 +20,12 @@
 
 // ---------------------------------------------- NoiseCrimeStudios : OBB Support
 float4x4	_OBBProbeWorldToLocal;
+
+// ---------------------------------------------- NoiseCrimeStudios : OBB Support Experimental
+// float4      _proxyForward;
+// float4      _proxyUp;
+// float4      _proxyRight;
+// float4      _proxyPositionRWS;
 // ----------------------------------------------
 
 //---------------------------------------

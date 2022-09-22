@@ -313,10 +313,23 @@ inline UnityGI FragmentGI (FragmentCommonData s, half occlusion, half4 i_ambient
 
         // ---------------------------------------------- NoiseCrimeStudios : OBB Support
 		#if OBB_PROJECTION
+
+        // ---------------------------------------------- NoiseCrimeStudios : OBB Support Experimental
+        // float3x3 worldToPS = transpose( float3x3( _proxyRight.xyz, _proxyUp.xyz, _proxyForward.xyz ) );
+        // float3x3 worldToPS  = float3x3( _proxyRight.xyz, _proxyUp.xyz, _proxyForward.xyz );
+        // g.probeLocalReflUVW     = mul( g.reflUVW, worldToPS);
+        // g.probeLocalPosition    = mul( d.worldPos, worldToPS);
+        // g.probeLocalPosition    += _proxyPositionRWS.xyz;
+        // ----------------------------------------------
+        
         // Intersection with OBB - Transform in local unit parallax cube space of probe (scaled and rotated)
         // If UNITY_STANDARD_SIMPLE defined could we do these in vertex shader?
         g.probeLocalReflUVW     = mul((float3x3)_OBBProbeWorldToLocal, g.reflUVW);  // normalise?
 		g.probeLocalPosition    = mul(_OBBProbeWorldToLocal, float4(d.worldPos, 1)).xyz;
+
+        // Alternative Test
+        // g.probeLocalPosition    = mul((float3x3)_OBBProbeWorldToLocal, d.worldPos);
+        // g.probeLocalPosition    += float3(_OBBProbeWorldToLocal[0][3], _OBBProbeWorldToLocal[1][3], _OBBProbeWorldToLocal[2][3]);        
 		#endif
         // ----------------------------------------------
 
